@@ -33,13 +33,13 @@ npm run build
 ## Commands
 
 - **uom:install**: add Bootstrap to npm and scaffold Vite imports.
-	- Flags: `--dev` to add to `devDependencies`.
+  - Flags: `--dev` to add to `devDependencies`.
 - **uom:dashboard**: scaffold a Bootstrap dashboard page.
-	- Flags: `--livewire` to create a Livewire component and wrapper page.
+  - Flags: `--livewire` to create a Livewire component and wrapper page.
 - **uom:page {path}**: scaffold a Bootstrap page at `resources/views/uom/{path}.blade.php`.
-	- Flags: `-r` add a `Route::view('/{path}', 'uom.{path}')` route with name `uom.{path}`.
-	- Flags: `-s` append a link to `resources/views/partials/uom-sidebar.blade.php`.
-	- Flags: `-l` generate a Livewire component under `App/Http/Livewire/Uom` and embed it in the page.
+  - Flags: `-r` add a `Route::view('/{path}', 'uom.{path}')` route with name `uom.{path}`.
+  - Flags: `-s` append a link to `resources/views/partials/uom-sidebar.blade.php`.
+  - Flags: `-l` generate a Livewire component under `App/Http/Livewire/Uom` and embed it in the page.
 
 ### Examples
 
