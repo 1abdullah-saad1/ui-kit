@@ -36,6 +36,7 @@ class UomInstallCommand extends Command
 
         $ensure('bootstrap', '^5.3.0');
         $ensure('@popperjs/core', '^2.11.8');
+        $ensure('@fortawesome/fontawesome-free', '^6.6.0');
 
         file_put_contents($packageJsonPath, json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) . PHP_EOL);
 
@@ -58,8 +59,13 @@ class UomInstallCommand extends Command
 
         if (file_exists($sassApp)) {
             $this->ensureLine($sassApp, '@import "bootstrap/scss/bootstrap";' . PHP_EOL);
+            $this->ensureLine($sassApp, '@import "@fortawesome/fontawesome-free/scss/fontawesome";' . PHP_EOL);
+            $this->ensureLine($sassApp, '@import "@fortawesome/fontawesome-free/scss/solid";' . PHP_EOL);
+            $this->ensureLine($sassApp, '@import "@fortawesome/fontawesome-free/scss/regular";' . PHP_EOL);
+            $this->ensureLine($sassApp, '@import "@fortawesome/fontawesome-free/scss/brands";' . PHP_EOL);
         } else {
             $this->ensureLine($cssApp, '@import "bootstrap/dist/css/bootstrap.min.css";' . PHP_EOL);
+            $this->ensureLine($cssApp, '@import "@fortawesome/fontawesome-free/css/all.min.css";' . PHP_EOL);
         }
     }
 
