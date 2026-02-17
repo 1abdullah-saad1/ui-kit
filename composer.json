@@ -16,5 +16,25 @@
       "name": "Laith J. Mohammad"
     }
   ],
-  "require": {}
+  "require": {},
+  "require-dev": {
+    "orchestra/testbench": "^8.0",
+    "phpunit/phpunit": "^10.5",
+    "livewire/livewire": "^3.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Uom\\UiKit\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Uom\\UiKit\\UiKitServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  }
 }
